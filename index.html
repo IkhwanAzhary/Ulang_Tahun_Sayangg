@@ -898,10 +898,9 @@ function renderGallery() {
       const img = document.createElement('img');
       img.src = photo;
       img.alt = 'Memory ' + (i+1);
+      img.onerror = () => { img.src = ''; slot.innerHTML = '<span style="font-size:1.5rem">❌</span><span>Foto tidak ditemukan</span>'; };
       slot.appendChild(img);
-      slot.onclick = () => {
-        if (confirm('Hapus foto ini?')) { photos[i] = null; renderGallery(); }
-      };
+      slot.onclick = () => {};
     } else {
       slot.innerHTML = '<span style="font-size:1.5rem">📷</span><span>Tambah Foto</span>';
       const input = document.createElement('input');
