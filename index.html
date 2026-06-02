@@ -880,7 +880,14 @@ updateCountdown();
 
 // ─── GALLERY ───
 const galleryGrid = document.getElementById('galleryGrid');
-const photos = Array(6).fill(null);
+const photos = [
+  'photo1.jpeg',
+  'photo2.jpeg',
+  'photo3.jpeg',
+  'photo4.jpeg',
+  'photo5.jpeg',
+  'photo6.jpeg'
+];
 
 function renderGallery() {
   galleryGrid.innerHTML = '';
